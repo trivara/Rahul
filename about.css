@@ -1,0 +1,245 @@
+/* Custom Cursor */
+body {
+    cursor: none; /* Hide the default cursor */
+}
+
+/* Background */
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('background-image.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    line-height: 1.6;
+    min-height: 100vh; /* Ensure body fills the screen */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 50px; /* Make space for footer */
+    animation: gradientAnimation 10s ease-in-out infinite;
+}
+
+/* Animated Background */
+@keyframes gradientAnimation {
+    0% {
+        background: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    }
+
+    50% {
+        background: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
+    }
+
+    100% {
+        background: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    }
+}
+
+/* Cursor Trail Styles */
+.cursor-trail {
+    position: absolute;
+    pointer-events: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: red; /* Set the initial color of the trail */
+    opacity: 0.8;
+    animation: trailAnimation 0.5s ease-out forwards;
+}
+
+/* Animation for the cursor trail */
+@keyframes trailAnimation {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+/* Header */
+header {
+  display:flex;
+  flex-direction:row;
+  align-items: center;
+  justify-content:center;
+  
+    background-color: rgba(128,128,128,0.5);
+    padding: 20px;
+    color: white;
+    text-align: center;
+    animation: fadeIn 2s ease-in;
+}
+
+header img {
+    width: auto;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+header a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 10px;
+    position: relative;
+    transition: all 0.4s ease;
+}
+
+/* Hover Effects for Links */
+header a:hover {
+    background: linear-gradient(45deg, #f5a623, #ff9f00, #ff6600); /* Gradient effect on hover */
+    color: #fff;
+    transform: translateY(-5px); /* Slightly lift the link */
+    box-shadow: 0 4px 15px rgba(255, 165, 35, 0.6); /* Glowing effect */
+}
+
+/* Title and Subtitle */
+h1,
+h2 {
+    color:gold;
+    animation: fadeInUp 2s ease-out;
+    transition: all 0.4s ease;
+}
+
+h1:hover,
+h2:hover {
+    color: #f5a623; /* Change color to a beautiful gold/orange */
+    transform: scale(1.1); /* Slightly enlarge the heading */
+}
+
+h1 {
+    font-size: 3rem;
+    margin: 20px 0;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+/* List and Services Section */
+ul,
+ol {
+    list-style-position: inside;
+    margin: 20px;
+}
+
+li {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+li u {
+    text-decoration: underline;
+    font-size: 1.5rem;
+}
+
+ol {
+    margin-left: 40px;
+}
+
+.service-item {
+    margin-bottom: 20px;
+}
+
+/* Hover Effects for List Items */
+li:hover {
+    color: #f5a623; /* Beautiful color change */
+    cursor: pointer;
+    transform: scale(1.05); /* Slightly enlarge the list item */
+    background: rgba(255, 165, 35, 0.1); /* Light background glow */
+    padding: 5px;
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Testimonials Section */
+.testimonials {
+    background-color: #222;
+    color: white;
+    padding: 40px;
+    text-align: center;
+    animation: fadeInUp 2s ease-out;
+}
+
+.testimonials blockquote {
+    font-style: italic;
+    margin: 20px 0;
+}
+
+/* Footer - Centered at the Bottom */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    width: 90%;
+    position: relative;  /* Fixed at the bottom */
+    margin-top: auto;
+    
+    animation: fadeIn 2s ease-in;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+/* Center Footer in the viewport if content is smaller */
+.text-box {
+  border: 2px solid #333; /* Dark border for contrast */
+  padding: 20px; /* Ample spacing for clean design */
+  max-width: 80%; /* Responsive width */
+  margin: 30px auto; /* Centers the box and adds vertical spacing */
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white for overlay effect */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Depth effect */
+  font-family: 'Roboto', sans-serif; /* Clean font style */
+  color: #222; /* Dark text color for readability */
+  border-radius: 10px; /* Rounded corners for a modern look */
+  text-align: center; /* Center-align the text */
+
+  /* Animation properties */
+  opacity: 0; /* Initially hidden */
+  transform: translateY(30px); /* Start 30px below */
+  animation: slideFadeIn 1s ease-out forwards; /* Animation name, duration, easing, and forward fill */
+}
+
+.text-box p {
+  margin: 10px 0; /* Spacing between lines */
+  font-size: 1.1rem; /* Slightly larger text size */
+}
+
+/* Keyframes for the animation */
+@keyframes slideFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

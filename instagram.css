@@ -1,0 +1,232 @@
+/* Basic Reset and Body Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #333;
+  padding: 10px;
+  color: white;
+  text-align: center;
+}
+
+.navbar h2 {
+  font-size: 24px;
+  animation: slideIn 1s ease-out;
+}
+
+/* Hero Section */
+.hero-section {
+  background: url('images/bg.png') no-repeat center center/cover;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 2s ease-out;
+}
+
+.hero-content {
+  text-align: center;
+  color: white;
+  animation: slideUp 1.5s ease-out;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  animation: fadeInUp 1.5s ease-out;
+}
+
+.hero-content p {
+  font-size: 20px;
+  animation: fadeInUp 2s ease-out;
+}
+
+/* About Section */
+.about {
+  padding: 50px 20px;
+  background-color: #fff;
+  text-align: center;
+  animation: fadeIn 2s ease-out;
+}
+
+.about h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Profile Section */
+.profile-container {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  animation: fadeIn 2s ease-out;
+}
+
+.profile {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+  padding: 20px;
+}
+
+.profile-header {
+  margin-bottom: 20px;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  animation: bounceIn 1s ease-out;
+}
+
+.profile-info h1 {
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+.profile-info p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.follow-btn {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.follow-btn:hover {
+  background-color: #45a049;
+}
+
+/* Post Gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 40px 20px;
+  animation: fadeIn 2s ease-out;
+}
+
+.post img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.post img:hover {
+  transform: scale(1.05);
+}
+
+/* Footer Button */
+footer {
+  text-align: center;
+  margin-top: 40px;
+}
+
+footer button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 12px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+footer button:hover {
+  background-color: #45a049;
+  transform: translateY(-5px);
+}
+
+footer button a {
+  text-decoration: none;
+  color: white;
+}
+
+footer button a:hover {
+  text-decoration: underline;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
